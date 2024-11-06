@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Frontend;
  
 use App\Http\Controllers\Controller;
-use Illuminate\View\View;
  
 class LoginController extends Controller
 {
-    public function login(): View
+    public function login()
     {
-        return view('frontend.auth.login');
+        return inertia('Login/index');
     }
 }
