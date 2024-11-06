@@ -12,3 +12,10 @@ Tech stack:
 - MySQL = Database
 - InertiaJS + ReactJS = Front-end
 - TailwindCSS = Styling CSS
+
+Actions:
+- [ ] Schema Database
+- [ ] Prototype UI
+- [ ] Slicing UI
+- [ ] Integration Database
+- [ ] Testing
