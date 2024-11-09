@@ -116,7 +116,7 @@ Tech stack:
 - TailwindCSS = Styling CSS
 
 Actions:
-- [x] Schema Database
+- [x] Schema Database https://dbdiagram.io/d/IuranWarga-672eb319e9daa85acad78570
 - [ ] Prototype UI
 - [ ] Slicing UI
 - [ ] Integration Database
