@@ -1,7 +1,7 @@
 import React from "react";
 import { Head } from "@inertiajs/react";
 import Button from "../../components/atoms/Button";
-import TextInput from "../../components/atoms/TextInput";
+import TextInput from "../../components/molecules/TextInput";
 
 export default function LoginPage() {
     return (
