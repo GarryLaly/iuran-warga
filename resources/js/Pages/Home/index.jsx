@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "@inertiajs/react";
 import { toCurrency } from "../../utils/format";
+import BottomMenu from "../../components/molecules/BottomMenu";
 
 export default function HomePage() {
     const pembayaranTerakhir = [
@@ -108,13 +108,7 @@ export default function HomePage() {
                     <div className="h-[50px]" />
                 </div>
             </div>
-            <div className="bg-gray-100 fixed bottom-0 max-w-[480px] w-full flex flex-row justify-around p-4 underline">
-                <Link href="/home">Beranda</Link>
-                <Link href="/members">Daftar Warga</Link>
-                <Link href="/payment">Bayar Iuran</Link>
-                <Link href="/report">Laporan</Link>
-                <Link href="/profile">Profil</Link>
-            </div>
+            <BottomMenu />
         </div>
     );
 }
