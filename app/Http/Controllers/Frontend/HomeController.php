@@ -1,0 +1,13 @@
+<?php
+ 
+namespace App\Http\Controllers\Frontend;
+ 
+use App\Http\Controllers\Controller;
+ 
+class HomeController extends Controller
+{
+    public function home()
+    {
+        return inertia('Home/index');
+    }
+}

@@ -10,4 +10,9 @@ class LoginController extends Controller
     {
         return inertia('Login/index');
     }
+
+    public function loginOtp()
+    {
+        return inertia('LoginOtp/index');
+    }
 }

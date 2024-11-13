@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\LoginController;
+use App\Http\Controllers\Frontend\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/login', [LoginController::class, 'login']);
+Route::get('/login/otp', [LoginController::class, 'loginOtp']);
+Route::get('/home', [HomeController::class, 'home']);
