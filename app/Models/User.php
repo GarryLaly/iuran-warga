@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'fullname',
+        'phone',
+        'photo',
         'password',
+        'address',
+        'role'
     ];
 
     /**
@@ -41,8 +44,39 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Get the wallet associated with the user.
+     */
+    public function wallet()
+    {
+        return $this->hasOne(Wallet::class);
+    }
+
+    /**
+     * Get the payments for the user.
+     */
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
+    /**
+     * Get the bill users for the user.
+     */
+    public function billUsers()
+    {
+        return $this->hasMany(BillUser::class);
+    }
+
+    /**
+     * Get the wallet mutations for the user.
+     */
+    public function walletMutations()
+    {
+        return $this->hasMany(WalletMutation::class);
     }
 }
