@@ -8,6 +8,9 @@ class HomeController extends Controller
 {
     public function home()
     {
-        return inertia('Home/index');
+        $user = \Auth::user();
+        return inertia('Home/index', [
+            'user' => $user,
+        ]);
     }
 }

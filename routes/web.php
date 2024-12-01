@@ -11,10 +11,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [LoginController::class, 'login']);
-Route::post('/login', [LoginController::class, 'login_post']);
-Route::get('/login/otp', [LoginController::class, 'loginOtp']);
-Route::get('/home', [HomeController::class, 'home']);
-Route::get('/profile', [ProfileController::class, 'profile']);
-Route::get('/report', [ReportController::class, 'report']);
-Route::get('/members', [MemberController::class, 'members']);
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [LoginController::class, 'login']);
+    Route::post('/login', [LoginController::class, 'loginPost']);
+    Route::get('/login/otp', [LoginController::class, 'loginOtp']);
+    Route::post('/login/otp', [LoginController::class, 'loginOtpPost']);
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/home', [HomeController::class, 'home']);
+    Route::get('/profile', [ProfileController::class, 'profile']);
+    Route::post('/logout', [LoginController::class, 'logout']);
+    Route::get('/report', [ReportController::class, 'report']);
+    Route::get('/members', [MemberController::class, 'members']);
+});

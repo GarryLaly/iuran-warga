@@ -6,6 +6,7 @@ export default function Button({
     url,
     bgColor = "bg-green-600",
     type = "submit",
+    onClick,
 }) {
     return url ? (
         <Link
@@ -18,6 +19,7 @@ export default function Button({
     ) : (
         <button
             type={type}
+            onClick={onClick}
             className={`${bgColor} rounded px-6 text-white py-2 self-center`}
         >
             {label}

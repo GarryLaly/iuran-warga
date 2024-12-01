@@ -1,8 +1,10 @@
 import React from "react";
 import { toCurrency } from "../../utils/format";
 import BottomMenu from "../../components/molecules/BottomMenu";
+import { usePage } from "@inertiajs/react";
 
 export default function HomePage() {
+    const { user } = usePage().props;
     const pembayaranTerakhir = [
         {
             nama: "Warga 1",
@@ -59,7 +61,9 @@ export default function HomePage() {
     return (
         <div className="bg-slate-300 h-screen w-full flex flex-col items-center">
             <div className="max-w-[480px] w-full bg-white py-4 px-6 min-h-screen flex flex-col">
-                <h1 className="text-lg font-bold">Malam pak Bagus</h1>
+                <h1 className="text-lg font-bold">
+                    Malam Pak {user?.fullname}
+                </h1>
                 <div className="bg-gray-300 my-2 text-sm p-2 rounded-md">
                     Pengumuman perayaan Agustus
                 </div>

@@ -8,6 +8,9 @@ class ProfileController extends Controller
 {
     public function profile()
     {
-        return inertia('Profile/index');
+        $user = \Auth::user();
+        return inertia('Profile/index', [
+            'user' => $user,
+        ]);
     }
 }
