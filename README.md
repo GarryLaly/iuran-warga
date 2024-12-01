@@ -28,6 +28,7 @@ Flow Bayar Tagihan:
 3. Klik Bayar dan Munculin QR dengan total nominal sesuai periode yang dipilih
 
 Example Data:
+```
 bills,
 [
   {
@@ -36,7 +37,7 @@ bills,
     name: "Iuran Bulanan 2024",
     amount: 10000,
     status: "active",
-    period: 12,
+    target_period: 12,
     start_at: "2024-01-01",
     end_at: "2024-12-31"
   },
@@ -46,14 +47,15 @@ bills,
     name: "Iuran 17an 2024",
     amount: 5000,
     status: "active",
-    period: 1,
+    target_period: 1,
     start_at: "2024-08-01",
     end_at: "2024-08-31"
   }
 ]
+```
 
 Apakah perlu menyimpan 1 tagihan per periode atau simpan semua periode yang dibayar?
-
+```
 bill_users,
 [
   {
@@ -81,7 +83,9 @@ bill_users,
     end_at: "2024-09-30"
   },
 ]
+```
 -----
+```
 payments,
 [
   {
@@ -108,6 +112,7 @@ payments,
     end_at: "2024-09-30"
   },
 ]
+```
 
 Tech stack:
 - Laravel 11 (PHP Framework) = Core & Logic System (Back-end)
