@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('phone', 20);
             $table->enum('status', ['new', 'used'])->default('new');
             $table->timestamp('expired_at');
+            $table->timestamp('max_request_at')->nullable(); //digunakan untuk akses kembeli setelah reached max request
             $table->integer('count_request')->default(0);
             $table->integer('max_request')->default(3);
             $table->timestamps();

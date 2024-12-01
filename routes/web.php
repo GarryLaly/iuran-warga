@@ -12,6 +12,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'login_post']);
 Route::get('/login/otp', [LoginController::class, 'loginOtp']);
 Route::get('/home', [HomeController::class, 'home']);
 Route::get('/profile', [ProfileController::class, 'profile']);
